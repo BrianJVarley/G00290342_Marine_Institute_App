@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -25,6 +26,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.location.Location;
+import android.media.ExifInterface;
 
 
 public class MainActivity extends ActionBarActivity implements OnClickListener {
@@ -152,9 +155,8 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		}
 	  
 	  
-	  
-	  
-	  
+	 
+	
 	  
 	  private void showPhoto(Uri photoUri) {
 		  String filePath = photoUri.getEncodedPath();
@@ -168,7 +170,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		     Bitmap bitmap = BitmapFactory.decodeFile(imageFile.getAbsolutePath());
 		     BitmapDrawable drawable = new BitmapDrawable(this.getResources(), bitmap);
 		     photoImage.setScaleType(ImageView.ScaleType.FIT_CENTER);
-		     photoImage.setImageDrawable(drawable);
+		     photoImage.setImageBitmap(Bitmap.createScaledBitmap(bitmap, 130, 110, false));
 		  }       
 		}
   
