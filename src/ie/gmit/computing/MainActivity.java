@@ -3,16 +3,18 @@ package ie.gmit.computing;
 //import com.example.cameratest.R;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.location.Location;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -26,8 +28,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-import android.location.Location;
-import android.media.ExifInterface;
 
 
 public class MainActivity extends ActionBarActivity implements OnClickListener {
@@ -51,6 +51,8 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		mClickButton1.setOnClickListener(this);
 		Button mClickButton2 = (Button)findViewById(R.id.searchBtn);
 		mClickButton2.setOnClickListener(this);
+		Button mClickButton3 = (Button)findViewById(R.id.resBtn);
+		mClickButton3.setOnClickListener(this);
 
 		
 		
@@ -70,10 +72,19 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 	 	         startActivityForResult(i, CAPTURE_IMAGE_ACTIVITY_REQ );
 	            break;
 	        }
+	        case  R.id.resBtn: {
+	            // start camera intent
+	        	 Toast.makeText(this, "result clicked", Toast.LENGTH_SHORT).show();
+	        	 Intent myIntentO = new Intent(MainActivity.this, SearchResult.class);
+	             MainActivity.this.startActivity(myIntentO);   
+	            break;
+	        }
 
 	        case R.id.searchBtn: {
 	            // search tree for matching debri
 	        	 Toast.makeText(this, "search clicked", Toast.LENGTH_SHORT).show();
+	        	 Intent myIntent = new Intent(MainActivity.this, SearchTree.class);
+	             MainActivity.this.startActivity(myIntent);   
 	            break;
 	        }
 	    }
@@ -91,27 +102,17 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 	public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
         case R.id.item1:
-          Toast.makeText(this, "Option1", Toast.LENGTH_SHORT).show();
+          Toast.makeText(this, "Add", Toast.LENGTH_SHORT).show();
           return true;
         case R.id.item2:
-          Toast.makeText(this, "Option2", Toast.LENGTH_SHORT).show();
+          Toast.makeText(this, "Delete", Toast.LENGTH_SHORT).show();
           return true;
-        case R.id.item3:
-          Toast.makeText(this, "Option3", Toast.LENGTH_SHORT).show();
-          return true;           
-        case R.id.item4:
-          Toast.makeText(this, "Option4", Toast.LENGTH_SHORT).show();
-          return true;
-        case R.id.item5:
-          Toast.makeText(this, "Option5", Toast.LENGTH_SHORT).show();
-          return true;
-        case R.id.item6:
-          Toast.makeText(this, "Option6", Toast.LENGTH_SHORT).show();
-          return true;           
+        
         default:
           return super.onOptionsItemSelected(item);
         } 
     } 
+	
 	
 	
 	
@@ -135,7 +136,6 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		    if (resultCode == RESULT_OK) {
 		      Uri photoUri = null;
 		      if (data == null) {
-		        // A known bug here! The image should have saved in fileUri
 		        Toast.makeText(this, "Image saved successfully", 
 		                       Toast.LENGTH_LONG).show();
 		        photoUri = fileUri;

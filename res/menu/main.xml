@@ -9,11 +9,9 @@
         android:title="@string/action_settings"
         app:showAsAction="ifRoom"/>
     
-    <item android:id="@+id/item1" android:title="Option1"></item>
-    <item android:id="@+id/item2" android:title="Option2"></item>
-    <item android:id="@+id/item3" android:title="Option3"></item>
-    <item android:id="@+id/item4" android:title="Option4"></item>
-    <item android:id="@+id/item5" android:title="Option5"></item>
-    <item android:id="@+id/item6" android:title="Option6"></item>
+    <item android:id="@+id/item1" android:title="Add"></item>
+    <item android:id="@+id/item2" android:title="Delete"></item>
+    
+    
 
 </menu>

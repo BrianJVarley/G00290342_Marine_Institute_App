@@ -47,4 +47,14 @@
         android:background="#590000"
         android:text="Search" />
 
+    <Button
+        android:id="@+id/resBtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoTextView"
+        android:layout_marginRight="31dp"
+        android:layout_toLeftOf="@+id/cameraBtn"
+        android:text="go to result" />
+
 </RelativeLayout>
