@@ -7,10 +7,10 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="collapseActionView"/>
     
-    <item android:id="@+id/item1" android:title="Add"></item>
-    <item android:id="@+id/item2" android:title="Delete"></item>
+    <item android:id="@+id/add" android:title="Add"></item>
+    <item android:id="@+id/delete" android:title="Delete"></item>
     
     
 

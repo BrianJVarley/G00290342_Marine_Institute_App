@@ -52,9 +52,13 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/photo_image"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/infoTextView"
-        android:layout_marginRight="31dp"
-        android:layout_toLeftOf="@+id/cameraBtn"
+        android:layout_toLeftOf="@+id/infoTextView"
         android:text="go to result" />
+
+    
+    
 
 </RelativeLayout>
