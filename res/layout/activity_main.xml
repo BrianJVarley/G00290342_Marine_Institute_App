@@ -29,8 +29,8 @@
 
     <Button
         android:id="@+id/cameraBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80sp"
+        android:layout_height="60sp"
         android:layout_alignRight="@+id/infoTextView"
         android:layout_below="@+id/photo_image"
         android:layout_marginTop="20dp"
@@ -39,8 +39,8 @@
 
     <Button
         android:id="@+id/searchBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
         android:layout_alignBaseline="@+id/cameraBtn"
         android:layout_alignBottom="@+id/cameraBtn"
         android:layout_alignLeft="@+id/infoTextView"
@@ -50,12 +50,12 @@
     <Button
         android:id="@+id/resBtn"
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_above="@+id/photo_image"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/infoTextView"
         android:layout_toLeftOf="@+id/infoTextView"
+        android:layout_height="12dp"
+        android:layout_width="20dp"
         android:text="go to result" />
 
     
