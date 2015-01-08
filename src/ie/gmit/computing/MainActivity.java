@@ -54,10 +54,6 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 		camClickButton.setOnClickListener(this);
 		Button searchClickButton = (Button)findViewById(R.id.searchBtn);
 		searchClickButton.setOnClickListener(this);
-		Button restClickButton = (Button)findViewById(R.id.resBtn);
-		restClickButton.setOnClickListener(this);
-		
-		 
 		
 	    
 	}
@@ -80,14 +76,6 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 	 	         startActivityForResult(i, CAPTURE_IMAGE_ACTIVITY_REQ );
 	            break;
 	        }
-	        case  R.id.resBtn: {
-	            // start camera intent
-	        	 Toast.makeText(this, "result clicked", Toast.LENGTH_SHORT).show();
-	        	 Intent myIntentO = new Intent(MainActivity.this, SearchResult.class);
-	             MainActivity.this.startActivity(myIntentO);   
-	            break;
-	        }
- 
 	        case R.id.searchBtn: {
 	            // search tree for matching debri
 	        	 Toast.makeText(this, "search clicked", Toast.LENGTH_SHORT).show();
