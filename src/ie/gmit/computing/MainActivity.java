@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -27,6 +28,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
  
  
+@SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity implements OnClickListener{
 	
 	
@@ -40,6 +42,12 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 	//counter var to add index to camera images
 	//can be used to cross reference csv record with image number.
 	private int i = 0;
+	//delay counter for button clickable
+	private int buttonDelay;
+	
+	//declare button fields 
+	private Button camClickButton;
+	private Button searchClickButton;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +57,10 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 		photoImage = (ImageView) findViewById(R.id.photo_image);
 		photoImage.setImageDrawable(null);
 	
-		
-		Button camClickButton = (Button)findViewById(R.id.cameraBtn);
+		//find button views
+		camClickButton = (Button)findViewById(R.id.cameraBtn);
 		camClickButton.setOnClickListener(this);
-		Button searchClickButton = (Button)findViewById(R.id.searchBtn);
+		searchClickButton = (Button)findViewById(R.id.searchBtn);
 		searchClickButton.setOnClickListener(this);
 		
 	    
@@ -77,10 +85,32 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 	            break;
 	        }
 	        case R.id.searchBtn: {
-	            // search tree for matching debri
-	        	 Toast.makeText(this, "search clicked", Toast.LENGTH_SHORT).show();
-	        	 Intent myIntent = new Intent(MainActivity.this, SearchTree.class);
-	             MainActivity.this.startActivity(myIntent);   
+	        	
+	        	boolean hasDrawable = (photoImage.getDrawable() != null);
+	        	if(hasDrawable) {
+	        	    // imageView has image in it, allow debri search
+	        		// search tree for matching debri
+		        	 Toast.makeText(this, "search clicked", Toast.LENGTH_SHORT).show();
+		        	 Intent myIntent = new Intent(MainActivity.this, SearchTree.class);
+		             MainActivity.this.startActivity(myIntent);
+	        		
+	        	}
+	        	else {
+	        	    // no image assigned to image view, disable button click for 'n' seconds
+	        		Toast.makeText(this, "please capture debri image first!", Toast.LENGTH_SHORT).show();
+	        		searchClickButton.setAlpha(.5f);
+	        		searchClickButton.setClickable(false);
+	        		try {
+						Thread.sleep(1000, 1000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+	        		Toast.makeText(this, "please capture debri image first!", Toast.LENGTH_SHORT).show();
+	        		searchClickButton.setClickable(true);
+	        		searchClickButton.setAlpha(255);
+	        	}
+	               
 	            break;
 	        }
 	    }

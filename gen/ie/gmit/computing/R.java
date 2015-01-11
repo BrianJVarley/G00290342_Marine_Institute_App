@@ -1569,11 +1569,12 @@ containing a value of this type.
         public static final int dropdown=0x7f080025;
         public static final int dyn_layout=0x7f080059;
         public static final int edit_query=0x7f080045;
-        public static final int emailBtn=0x7f080057;
+        public static final int emailBtn=0x7f080058;
         public static final int emailEditText=0x7f080064;
         public static final int end=0x7f080028;
         public static final int expand_activities_button=0x7f08003b;
         public static final int expanded_menu=0x7f080041;
+        public static final int exportBtn=0x7f080057;
         public static final int filmBtn=0x7f08005f;
         public static final int flexibleBtn=0x7f08005b;
         public static final int grayscale=0x7f080015;
@@ -1614,7 +1615,6 @@ containing a value of this type.
         public static final int search_plate=0x7f08004b;
         public static final int search_src_text=0x7f08004c;
         public static final int search_voice_btn=0x7f080050;
-        public static final int selectBtn=0x7f080058;
         public static final int selectionDetails=0x7f08000d;
         public static final int shipNameEditText=0x7f080062;
         public static final int shortcut=0x7f080043;
