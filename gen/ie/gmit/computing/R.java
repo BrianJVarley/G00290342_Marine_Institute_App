@@ -1530,6 +1530,7 @@ containing a value of this type.
         public static final int wood=0x7f020084;
     }
     public static final class id {
+        public static final int acrylicBtn=0x7f080063;
         public static final int action_bar=0x7f080031;
         public static final int action_bar_activity_content=0x7f08002a;
         public static final int action_bar_container=0x7f080030;
@@ -1541,12 +1542,12 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f08002b;
         public static final int action_menu_presenter=0x7f08002c;
         public static final int action_mode_close_button=0x7f080039;
-        public static final int action_settings=0x7f080067;
+        public static final int action_settings=0x7f080069;
         public static final int activity_chooser_view_content=0x7f08003a;
-        public static final int add=0x7f080068;
+        public static final int add=0x7f08006a;
         public static final int adjust_height=0x7f080002;
         public static final int adjust_width=0x7f080001;
-        public static final int aluminiumBtn=0x7f080061;
+        public static final int aluminiumBtn=0x7f080062;
         public static final int always=0x7f080021;
         public static final int beginning=0x7f080026;
         public static final int book_now=0x7f080012;
@@ -1560,9 +1561,10 @@ containing a value of this type.
         public static final int checkbox=0x7f080042;
         public static final int classic=0x7f080014;
         public static final int collapseActionView=0x7f080023;
-        public static final int colourEditText=0x7f080066;
+        public static final int colourEditText=0x7f080068;
+        public static final int copperBtn=0x7f080061;
         public static final int default_activity_button=0x7f08003d;
-        public static final int delete=0x7f080069;
+        public static final int delete=0x7f08006b;
         public static final int dialog=0x7f080024;
         public static final int disableHome=0x7f08001e;
         public static final int donate_with_google=0x7f080013;
@@ -1570,7 +1572,7 @@ containing a value of this type.
         public static final int dyn_layout=0x7f080059;
         public static final int edit_query=0x7f080045;
         public static final int emailBtn=0x7f080058;
-        public static final int emailEditText=0x7f080064;
+        public static final int emailEditText=0x7f080066;
         public static final int end=0x7f080028;
         public static final int expand_activities_button=0x7f08003b;
         public static final int expanded_menu=0x7f080041;
@@ -1603,7 +1605,7 @@ containing a value of this type.
         public static final int radio=0x7f080044;
         public static final int sandbox=0x7f08000a;
         public static final int satellite=0x7f080004;
-        public static final int scientistEditText=0x7f080063;
+        public static final int scientistEditText=0x7f080065;
         public static final int searchBtn=0x7f080055;
         public static final int search_badge=0x7f080047;
         public static final int search_bar=0x7f080046;
@@ -1616,7 +1618,7 @@ containing a value of this type.
         public static final int search_src_text=0x7f08004c;
         public static final int search_voice_btn=0x7f080050;
         public static final int selectionDetails=0x7f08000d;
-        public static final int shipNameEditText=0x7f080062;
+        public static final int shipNameEditText=0x7f080064;
         public static final int shortcut=0x7f080043;
         public static final int showCustom=0x7f08001d;
         public static final int showHome=0x7f08001a;
@@ -1632,7 +1634,7 @@ containing a value of this type.
         public static final int top_action_bar=0x7f080035;
         public static final int up=0x7f080036;
         public static final int useLogo=0x7f080019;
-        public static final int volumeEditText=0x7f080065;
+        public static final int volumeEditText=0x7f080067;
         public static final int withText=0x7f080022;
         public static final int woodBtn=0x7f08005d;
         public static final int wrap_content=0x7f08000f;

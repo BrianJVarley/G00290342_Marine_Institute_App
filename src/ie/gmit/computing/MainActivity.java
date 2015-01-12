@@ -9,6 +9,7 @@ import java.util.Locale;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -40,8 +41,9 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 	private ImageView photoImage = null;
 	
 	//counter var to add index to camera images
-	//can be used to cross reference csv record with image number.
-	private int i = 0;
+	//can be used to cross reference csv record number with image number.
+	private int imageCntr = 0;
+	
 	//delay counter for button clickable
 	private int buttonDelay;
 	
@@ -106,7 +108,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-	        		Toast.makeText(this, "please capture debri image first!", Toast.LENGTH_SHORT).show();
+	        		Toast.makeText(this, "Please capture debri image first!", Toast.LENGTH_SHORT).show();
 	        		searchClickButton.setClickable(true);
 	        		searchClickButton.setAlpha(255);
 	        	}
@@ -152,10 +154,32 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 		      return null;
 		    }
 		  }
+		  
+		  /*
+		  //retrieve image cntr from prefs
+          SharedPreferences settings = getSharedPreferences("IMAGE_RECORD_PREF", 0);
+          imageCntr = settings.getInt("IMAGE_RECORD_COUNT", 0); //0 is the default value
+	       */ 
+		  
+		  
 		  String timeStamp = new SimpleDateFormat("yyyMMdd_HHmmss", Locale.ENGLISH).format(new Date());
-		  return new File(directory.getPath() + File.separator + "IMG_"  
+		  File result = new File(directory.getPath() + File.separator + "IMG_"  
 		                    + timeStamp + ".jpg");
-		}
+		  
+		   imageCntr ++;
+		  
+		   /*
+		    //save image cntr from prefs
+	        settings = getSharedPreferences("IMAGE_RECORD_PREF", 0);
+	        SharedPreferences.Editor editor = settings.edit();
+	        editor.putInt("IMAGE_RECORD_COUNT",imageCntr);
+	        editor.commit();
+	        */
+	        return result;
+	        
+	}
+	
+	
 	  
 	  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		  if (requestCode == CAPTURE_IMAGE_ACTIVITY_REQ) {
