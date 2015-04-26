@@ -1,6 +1,6 @@
 package ie.gmit.computing;
  
-//import com.example.cameratest.R;
+
  
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -29,6 +29,10 @@ import android.widget.ImageView;
 import android.widget.Toast;
  
  
+/**
+ * @author Brian Varley
+ *
+ */
 @SuppressLint("NewApi")
 public class MainActivity extends ActionBarActivity implements OnClickListener{
 	
@@ -44,13 +48,14 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 	//can be used to cross reference csv record number with image number.
 	private int imageCntr = 0;
 	
-	//delay counter for button clickable
-	private int buttonDelay;
 	
 	//declare button fields 
 	private Button camClickButton;
 	private Button searchClickButton;
 	
+	/* (non-Javadoc)
+	 * @see android.support.v7.app.ActionBarActivity#onCreate(android.os.Bundle)
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -74,6 +79,9 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 	
 	
 	//handle button clicks
+	/* (non-Javadoc)
+	 * @see android.view.View.OnClickListener#onClick(android.view.View)
+	 */
 	public void onClick(View v) {
 	    switch (v.getId()) {
 	        case  R.id.cameraBtn: {
@@ -120,6 +128,9 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 	
 	
 	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+	 */
 	public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -127,6 +138,9 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
  
 	
 	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
 	public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
         case R.id.add:
@@ -144,6 +158,10 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 	
 	
 	
+	
+	/**
+	 * @return
+	 */
 	
 	private File getOutputPhotoFile() {
 		  File directory = new File(Environment.getExternalStoragePublicDirectory(
@@ -181,7 +199,10 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 	
 	
 	  
-	  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	  /* (non-Javadoc)
+	 * @see android.support.v4.app.FragmentActivity#onActivityResult(int, int, android.content.Intent)
+	 */
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		  if (requestCode == CAPTURE_IMAGE_ACTIVITY_REQ) {
 		    if (resultCode == RESULT_OK) {
 		      Uri photoUri = null;
@@ -208,10 +229,12 @@ public class MainActivity extends ActionBarActivity implements OnClickListener{
 	 
 	
 	  
-	  private void showPhoto(Uri photoUri) {
+	  /**
+	 * @param photoUri
+	 */
+	private void showPhoto(Uri photoUri) {
 		  String filePath = photoUri.getEncodedPath();
 		  File imageFile = new File(filePath);
-		  //File imageFile = new File(photoUri.getPath());
 		  if (imageFile.exists()){
 			 Drawable oldDrawable = photoImage.getDrawable(); 
 			 if (oldDrawable != null) { 

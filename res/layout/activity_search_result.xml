@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C6BA0"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/capturedDebriImageView"
+        android:layout_width="340dp"
+        android:layout_height="220dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Search Result"
+        android:textSize="29dp" />
+
+    <TextView
+        android:id="@+id/capturedDebriTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/capturedDebriImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text=""
+        android:textSize="34dp" />
+
+    <Button
+        android:id="@+id/exportBtn"
+        android:layout_width="80sp"
+        android:layout_height="60sp"
+        android:background="#590000"
+        android:layout_marginTop="400sp"
+        android:layout_marginLeft="180sp"
+        android:text="Export Data" />
+
+    <Button
+        android:id="@+id/emailBtn"
+        android:layout_width="80sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="400sp"
+        android:layout_marginLeft="70sp"
+        android:background="#590000"
+        android:text="Email Data" />
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ship name"
+        android:id="@+id/shipNameEditText" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="analyst name"
+        android:id="@+id/scientistEditText" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="email address"
+        android:id="@+id/emailEditText"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="sample volume"
+        android:id="@+id/volumeEditText"
+        android:digits="abcdefghijklmnopqrstuvwxyz1234567890" />
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="sample colour"
+        android:id="@+id/colourEditText" />
+    
+   
+
+</LinearLayout>

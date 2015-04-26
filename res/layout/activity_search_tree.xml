@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/dyn_layout" >
+
+    <Button
+        android:id="@+id/hardBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="hard" />
+    
+     <Button
+        android:id="@+id/flexibleBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="flexible" />
+     
+      <Button
+        android:id="@+id/squashableBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="squashable" />
+      
+    
+      <Button
+        android:id="@+id/woodBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="wood"
+        android:visibility="invisible" />
+      
+      <Button
+        android:id="@+id/styreneBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="styrene"
+        android:visibility="invisible" />
+      
+      <Button
+        android:id="@+id/filmBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="film" 
+        android:visibility="invisible"/>
+      
+      <Button
+        android:id="@+id/ceramicBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="ceramic" 
+        android:visibility="invisible"/>
+      
+      <Button
+        android:id="@+id/copperBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="copper"
+        android:visibility="invisible" />
+      
+      <Button
+        android:id="@+id/aluminiumBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="aluminium"
+        android:visibility="invisible" />
+      
+      <Button
+        android:id="@+id/acrylicBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="acrylic"
+        android:visibility="invisible" />
+      
+       
+</LinearLayout>
